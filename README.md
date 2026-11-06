@@ -13,7 +13,7 @@ npm run build
 npm start
 ```
 
-The production static export is `out/`. `npm start` serves it at http://127.0.0.1:3100. Upload `out/` to a static host with directory index support and `404.html` as the not-found document. The existing `.openai/hosting.json` Site identity is retained. No backend, secret or database is required.
+The production static export is `out/`. `npm start` serves it at http://127.0.0.1:3100. Upload `out/` to a static host with directory index support and `404.html` as the not-found document. The existing `.openai/hosting.json` Site identity is retained. The Google Sheets form requires the server-side API and private environment settings described below.
 
 ## Edit content
 
@@ -33,7 +33,11 @@ Material UI provides outlined TextFields, category selection, Button and Alert i
 
 ## Enquiries
 
-Forms validate name, phone and category, then prepare a WhatsApp message to +91 98439 99828. The visitor presses Send in WhatsApp. A visible fallback link appears after preparation. No form data is stored, no message is sent automatically. Telephone and Google Maps links are wired. No email link is invented because the owner has not supplied an address.
+Forms validate every field, submit through a private API bridge, save to Google Sheets and request an owner email notification. Loading, retry protection, rate limits and a single success toast are included. Empty `NEXT_PUBLIC_ENQUIRY_API_URL` keeps the explicit WhatsApp fallback. See [GOOGLE-SHEETS-SETUP.md](GOOGLE-SHEETS-SETUP.md).
+
+For the configured Vercel host, `vercel.json` deploys the static `out/` directory plus `api/enquiries.mjs`. Keep the Framework Preset as Other (the file sets `framework: null`), use Node.js 24, and configure private values in Vercel Project Settings → Environment Variables for Production. Local `.env` is ignored by Git and is not automatically uploaded. Redeploy after changing environment variables. `npm run check:enquiry -- --remote` diagnoses configuration, preflight and Google authentication without creating a row or sending mail.
+
+For a separate Node host, run `npm run api:start` with Node.js 22+ and expose it over HTTPS. `npm start` is a static preview; it does not serve the API. Keep `NEXT_PUBLIC_ENQUIRY_API_URL` pointed at your deployed bridge, never Apps Script. Rebuild whenever a public variable changes.
 
 ## Owner confirmation before launch
 

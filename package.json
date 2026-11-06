@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "api:start": "node server/serve.mjs",
     "test:enquiry": "node --test tests/enquiry*.test.mjs",
-    "audit:enquiry": "node scripts/audit-enquiry-config.mjs"
+    "audit:enquiry": "node scripts/audit-enquiry-config.mjs",
+    "check:enquiry": "node scripts/check-enquiry.mjs"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",

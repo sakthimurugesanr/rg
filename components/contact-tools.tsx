@@ -4,7 +4,7 @@ import {useId,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import {Phone,X} from 'lucide-react';
+import {MessageSquareText,Phone,X} from 'lucide-react';
 import EnquiryForm from '@/components/enquiry-form';
 import {business,whatsapp} from '@/data/business';
 import {products} from '@/data/products';
@@ -15,7 +15,7 @@ export default function ContactTools(){
  const [open,setOpen]=useState(false);const id=useId();const pathname=usePathname();
  const product=pathname.startsWith('/products/')?products.find(p=>p.slug===pathname.split('/')[2]):undefined;
  return <>
-  <button type="button" className="enquiry-tab" aria-haspopup="dialog" aria-expanded={open} aria-controls={`${id}-panel`} onClick={()=>setOpen(true)}><span>Enquiry</span></button>
+  <button type="button" className="enquiry-tab" aria-label="Open enquiry form" title="Enquire about fabrics" aria-haspopup="dialog" aria-expanded={open} aria-controls={`${id}-panel`} onClick={()=>setOpen(true)}><MessageSquareText size={22} aria-hidden="true"/><span className="enquiry-tab-label">Enquiry</span></button>
   <div className="floating-contact" aria-label="Quick contact">
    <a className="contact-circle contact-circle-call" href={business.tel} aria-label="Call R.G. Traders" title="Call R.G. Traders"><Phone size={23} aria-hidden="true"/><span className="contact-tooltip" aria-hidden="true">Call</span></a>
    <a className="contact-circle contact-circle-whatsapp" href={whatsapp(product?`Hello R.G. Traders, please share a quote for ${product.name}.`:'Hello R.G. Traders, please help me with a fabric requirement.')} aria-label="WhatsApp R.G. Traders" title="WhatsApp R.G. Traders" target="_blank" rel="noopener noreferrer"><WhatsAppIcon/><span className="contact-tooltip" aria-hidden="true">WhatsApp</span></a>
