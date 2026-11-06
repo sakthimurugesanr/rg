@@ -1,0 +1,12 @@
+/* Self-hosted Latin fonts. Text uses system fallback immediately while fonts load. */
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-689fa94c.woff2') format('woff2')}
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-73563c2f.woff2') format('woff2')}
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-221962ca.woff2') format('woff2')}
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-5946da67.woff2') format('woff2')}
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-5fe8fa82.woff2') format('woff2')}
+@font-face{font-family:'Encode Sans Semi Expanded';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/current/encode-sans-semi-expanded-00ad306d.woff2') format('woff2')}
+@font-face{font-family:'Gabarito';font-style:normal;font-weight:400 900;font-display:swap;src:url('/fonts/current/gabarito-18bda2d6.woff2') format('woff2')}
+@font-face{font-family:'Goldman';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/current/goldman-294d6152.woff2') format('woff2')}
+@font-face{font-family:'Goldman';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/current/goldman-33ad54ec.woff2') format('woff2')}
+@font-face{font-family:'Italiana';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/current/italiana-846911c4.woff2') format('woff2')}
+@font-face{font-family:'Krona One';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/current/krona-one-8066b48b.woff2') format('woff2')}

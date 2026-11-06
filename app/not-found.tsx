@@ -1,0 +1,1 @@
+export default function NotFound(){return <section className="not-found"><span className="eyebrow">R.G. Traders / 404</span><h1>Page not found.</h1><p>Browse the fabric catalogue or contact us for help.</p><a className="button" href="/#products">View Products</a></section>}

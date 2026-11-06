@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+.sites-local/
+
+# Local reference files and QA captures are not part of the published source.
+source-assets/
+qa/
+rg-traders-production.zip
+*.tar.gz
+outputs/
+.dev.vars*
+.wrangler/
